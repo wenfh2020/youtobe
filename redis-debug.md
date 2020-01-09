@@ -1,4 +1,8 @@
-### Prepare
+# Redis debug
+
+
+
+## Prepare
 
 - install gdb
 
@@ -35,6 +39,8 @@ OPTIMIZATION?=-O0
 # REDIS_LD=$(QUIET_LINK)$(CC) $(FINAL_LDFLAGS)
 REDIS_LD=$(QUIET_LINK)$(CC) $(FINAL_LDFLAGS) $(OPTIMIZATION)
 ```
+
+
 
 ## Build
 
