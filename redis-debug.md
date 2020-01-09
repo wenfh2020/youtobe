@@ -55,7 +55,15 @@ sudo code --user-data-dir="~/.vscode-root" .
 
 
 
-### Debug
+### Debug by gdb
+
+```
+sudo gdb --args ./src/redis-server redis.conf
+```
+
+
+
+### Debug by vscode
 
 press F5 to begin the debuging project....
 
@@ -109,6 +117,6 @@ press F5 to begin the debuging project....
 
 ```
 ps -ef | grep -i redis | grep -v grep | awk '{print $3}' | xargs sudo kill -9
- ps -ef | grep -i vscode | grep -v grep | awk '{print $3}' | xargs sudo kill -9
+ps -ef | grep -i vscode | grep -v grep | awk '{print $3}' | xargs sudo kill -9
 ```
 
