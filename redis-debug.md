@@ -49,13 +49,13 @@ ls -l src/redis-server
 
 ### server
 
-```
+```shell
 ./src/redis-server redis.conf
 ```
 
 ### client
 
-```
+```shell
 ./src/redis-cli
 set k123456 v123456
 ```
@@ -66,9 +66,10 @@ set k123456 v123456
 
 ### Gdb debug command
 
-```
+```shell
 sudo gdb --args ./src/redis-server redis.conf
 r
+ctrl + c
 b dict.c:dictAdd
 c
 focus
@@ -84,8 +85,6 @@ p (unsigned char*)key
 n
 quit
 ```
-
-
 
 
 
@@ -134,7 +133,7 @@ press F5 to begin the debuging project....
 
 - tasks.json
 
-```shell
+```json
 {
     "version": "2.0.0",
     "tasks": [
