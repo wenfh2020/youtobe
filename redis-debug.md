@@ -45,20 +45,56 @@ ls -l src/redis-server
 
 
 
+## Test
+
+### server
+
+```
+./src/redis-server redis.conf
+```
+
+### client
+
+```
+./src/redis-cli
+set k123456 v123456
+```
+
+### 
+
+## Debug by gdb
+
+### Gdb debug command
+
+```
+sudo gdb --args ./src/redis-server redis.conf
+r
+b dict.c:dictAdd
+c
+focus
+info win
+fs cmd
+bt
+f 11
+f 10
+s
+n
+p key
+p (unsigned char*)key
+n
+quit
+```
+
+
+
+
+
 ## VScode Gdb Debug
 
 ### open redis project
 
 ```shell
 sudo code --user-data-dir="~/.vscode-root" .
-```
-
-
-
-### Debug by gdb
-
-```
-sudo gdb --args ./src/redis-server redis.conf
 ```
 
 
