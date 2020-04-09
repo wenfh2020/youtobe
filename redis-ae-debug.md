@@ -1,6 +1,6 @@
-# Debug the Multiplexing events of redis
+# Debug the async events of redis
 
-Debug the Multiplexing's workflow.
+Multiplexing's workflow.
 
 ---
 
