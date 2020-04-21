@@ -6,8 +6,11 @@ Stress test redis 6.0 multi-threaded processing network i/o
 
 ## obj
 
-* redis-server
 * redis-benchmark
+* redis-server
+* benchmark.sh
+* tmux
+* htop
 
 ---
 
@@ -94,3 +97,9 @@ SET: 81612.66 requests per second
 GET: 116618.08 requests per second
 ...
 ```
+
+---
+
+## video
+
+* [bilibili](https://www.bilibili.com/video/BV1r5411t7QF/)
