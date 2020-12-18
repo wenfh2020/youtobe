@@ -1,76 +1,74 @@
 # Redis debug
 
-
-
-## Prepare
+## 1. Prepare
 
 - install gdb
 
 - install vscode
 
+---
 
+## 2. Download
 
-## Download
+Download [redis source](http://download.redis.io/releases/).
 
-Download redis source.
-
-http://download.redis.io/releases/
-
-```
+```shell
 cd ~/src/other
 wget http://download.redis.io/releases/redis-3.2.8.tar.gz
 tar zxf redis-3.2.8.tar.gz
 ```
 
+---
 
+## 3. Update Makefile
 
-## Update Makefile
+Modify Makefile add -O0 to build redis-server project
 
-modify Makefile add -O0 to build redis-server project
-
-```
+```shell
 cd redis-3.2.8
 vim src/Makefile
 ```
 
-```
+```shell
 # OPTIMIZATION?=-O2
 OPTIMIZATION?=-O0
 # REDIS_LD=$(QUIET_LINK)$(CC) $(FINAL_LDFLAGS)
 REDIS_LD=$(QUIET_LINK)$(CC) $(FINAL_LDFLAGS) $(OPTIMIZATION)
 ```
 
+---
 
-
-## Build
+## 4. Build
 
 ```shell
 make clean; make
 ls -l src/redis-server
 ```
 
+---
 
+## 5. Test
 
-## Test
-
-### server
+### 5.1. server
 
 ```shell
 ./src/redis-server redis.conf
 ```
 
-### client
+---
+
+### 5.2. client
 
 ```shell
 ./src/redis-cli
 set k123456 v123456
 ```
 
-### 
+---
 
-## Debug by gdb
+## 6. Debug by gdb
 
-### Gdb debug command
+### 6.1. Gdb debug command
 
 ```shell
 sudo gdb --args ./src/redis-server redis.conf
@@ -92,25 +90,25 @@ n
 quit
 ```
 
+---
 
+## 7. VScode Gdb Debug
 
-## VScode Gdb Debug
-
-### open redis project
+### 7.1. open redis project
 
 ```shell
 sudo code --user-data-dir="~/.vscode-root" .
 ```
 
+---
 
-
-### Debug by vscode
+### 7.2. Debug by vscode
 
 press F5 to begin the debuging project....
 
+---
 
-
-### Add config
+### 7.3. Add config
 
 - launch.json
 
@@ -152,12 +150,11 @@ press F5 to begin the debuging project....
 }
 ```
 
+---
 
+### 7.4. Clear
 
-### Clear
-
-```
+```shell
 ps -ef | grep -i redis | grep -v grep | awk '{print $3}' | xargs sudo kill -9
 ps -ef | grep -i vscode | grep -v grep | awk '{print $3}' | xargs sudo kill -9
 ```
-

@@ -4,7 +4,7 @@ Stress test redis 6.0 multi-threaded processing network i/o
 
 ---
 
-## obj
+## 1. obj
 
 * redis-benchmark
 * redis-server
@@ -14,7 +14,7 @@ Stress test redis 6.0 multi-threaded processing network i/o
 
 ---
 
-## download redis 6.0
+## 2. download redis 6.0
 
 ```shell
 cd ~
@@ -25,7 +25,7 @@ tar zxf 6.0
 
 ---
 
-## build
+## 3. build
 
 ```shell
 cd redis-6.0/src
@@ -34,7 +34,7 @@ make clean; make
 
 ---
 
-## script
+## 4. script
 
 ```shell
 cd ..
@@ -44,7 +44,7 @@ chmod +x benchmark.sh
 
 ---
 
-## test
+## 5. test
 
 * copy config
 
@@ -100,7 +100,7 @@ GET: 116618.08 requests per second
 
 ---
 
-## video
+## 6. video
 
 * [bilibili](https://www.bilibili.com/video/BV1r5411t7QF/)
 * [youtube](https://www.youtube.com/watch?v=qkoukeSVU1c&feature=youtu.be)

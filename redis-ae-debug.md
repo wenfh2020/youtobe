@@ -4,19 +4,19 @@ Multiplexing's workflow.
 
 ---
 
-## server
+## 1. server
 
 redis-server
 
 ---
 
-## client
+## 2. client
 
 redis-cli
 
 ---
 
-## break point
+## 3. break point
 
 * listen
 
